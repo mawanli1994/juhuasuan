@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>活动页面</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/reset.css"/>-->
+		<link rel="stylesheet" type="text/css" href="css/activity.css"/>
+		<!--<style>
+			header{
+				width: 100%;	
+			}
+			#head{
+				width: 940px;
+				height: 82px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#head img{
+				width: 149px;
+				height: 120px;
+				position: absolute;
+				z-index: 999;
+			}
+			#head ul{
+				float: right;
+				margin-top: 22px;
+			}
+			#head li{
+				float: left;
+				width: 68px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				font-weight: 600;
+			}
+			#head ul a{
+				display: block;
+				border-radius: 5px;
+			}
+			#head ul li a:hover{
+				background: #DCDCDC;
+			}
+			#nav{
+				width: 100%;
+				height: 100px;
+				background-color: #f3f3f3;
+				position: relative;
+				border-bottom:2px solid silver;
+				border-top:2px solid silver;				
+			}
+			#today{
+				width: 940px;
+				height: 50px;
+				position: absolute;
+				margin-top: 40px;
+				margin-left: 213px;
+			}
+			#today span{
+				float: left;
+				font-size: 18px;
+				font-weight: bold;
+				width: 72px;
+				height: 25px;
+				border-right: 2px solid silver;
+				margin-top: 20px;
+			}
+			#today #x-menu{
+				float: left;
+				margin-left: 20px;
+			}
+			#today #x-menu li{
+				float: left;
+				margin-top: 25px;
+				margin-left: 16px;
+			}
+			#today #x-menu li a{
+				font-size: 14px;
+			}
+			#today #x-menu li a:hover{
+				color: red;
+			}
+			main{
+				width: 100%;
+				background-color: #F3F3F3;
+			}
+			#shoes{
+				width: 940px;
+				height: 1200px;
+				margin: 0 auto;
+			}
+			#shoes-women{
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+			#women-top{
+				width: 100%;
+				height: 60px;
+				background-color: #FA2960;
+				position: absolute;
+				top: 10px;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				font-size: 24px;
+			}
+			#women-list{
+				width: 100%;
+				height: 220px;
+				position: absolute;
+				top: 80px;
+			}			
+			#women-list #img-left{
+				float: left;
+				/*margin-left: 2px;*/
+			}
+			#img-left:hover{
+				border: 2px solid red;
+			}
+			#img-left p{
+				width: 464px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#women-list em{
+				color: red;
+			}
+			
+			#only{
+				color: red;
+				float: right;
+				margin-right: 5px;
+			}
+			#women-list #img-right{
+				float: right;
+				/*margin-right: 3px;*/
+			}
+			#img-right:hover{
+				border: 2px solid red;
+			}
+			#img-right p{
+				width: 466px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#shoes-men{
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+			#men-top{
+				width: 100%;
+				height: 60px;
+				background-color: #FA2960;
+				position: absolute;
+				top: 10px;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				font-size: 24px;
+			}
+			#men-list{
+				width: 100%;
+				height: 220px;
+				position: absolute;
+				top: 80px;
+			}			
+			#men-list #img-left{
+				float: left;
+			}
+			#img-left:hover{
+				border: 2px solid red;
+			}
+			#img-left p{
+				width: 464px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#men-list em{
+				color: red;
+			}			
+			#only{
+				color: red;
+				float: right;
+				margin-right: 5px;
+			}
+			#men-list #img-right{
+				float: right;
+			}
+			#img-right:hover{
+				border: 2px solid red;
+			}
+			#img-right p{
+				width: 466px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#shoes-boy{
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+			#boy-top{
+				width: 100%;
+				height: 60px;
+				background-color: #FA2960;
+				position: absolute;
+				top: 10px;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				font-size: 24px;
+			}
+			#boy-list{
+				width: 100%;
+				height: 220px;
+				position: absolute;
+				top: 80px;
+			}			
+			#boy-list #img-left{
+				float: left;
+			}
+			#img-left:hover{
+				border: 2px solid red;
+			}
+			#img-left p{
+				width: 464px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#boy-list em{
+				color: red;
+			}			
+			#only{
+				color: red;
+				float: right;
+				margin-right: 5px;
+			}
+			#boy-list #img-right{
+				float: right;
+			}
+			#img-right:hover{
+				border: 2px solid red;
+			}
+			#img-right p{
+				width: 466px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#shoes-phone{
+				width: 100%;
+				height: 300px;
+				position: relative;
+			}
+			#phone-top{
+				width: 100%;
+				height: 60px;
+				background-color: #FA2960;
+				position: absolute;
+				top: 10px;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				font-size: 24px;
+			}
+			#phone-list{
+				width: 100%;
+				height: 220px;
+				position: absolute;
+				top: 80px;
+			}			
+			#phone-list #img-left{
+				float: left;
+			}
+			#img-left:hover{
+				border: 2px solid red;
+			}
+			#img-left p{
+				width: 464px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			#phone-list em{
+				color: red;
+			}			
+			#only{
+				color: red;
+				float: right;
+				margin-right: 5px;
+			}
+			#phone-list #img-right{
+				float: right;
+			}
+			#img-right:hover{
+				border: 2px solid red;
+			}
+			#img-right p{
+				width: 466px;
+				height: 30px;
+				background: white;
+				margin-top: -2px;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			
+			
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				border-top: 4px solid #ccc;	
+			}
+			#last{
+				width: 1196px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				margin-top: 50px;
+			}
+			#last-nav li{
+				float: left;
+				margin-right: 120px;
+				font-size: 14px;
+				color: #666;
+			}
+			#last-nav li p{
+				font-size: 12px;
+				margin-top: 30px;
+				color: #666;
+			}
+			#last-nav li:first-child{
+				font-weight: bold;
+				font-size: 24px;
+				
+			}
+		</style>-->
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<img src="img/jhs.jpg"/>
+				<ul>
+					<li><a href="" class="write">首页</a></li>
+					<li><a href="">品牌团</a></li>
+					<li><a href="">非常大牌</a></li>
+					<li><a href="">聚名品</a></li>
+					<li><a href="">全球精选</a></li>
+					<li><a href="">量版团</a></li>
+				</ul>
+			</div>			
+		</header>
+		<div id="nav">
+			<div id="today">
+				<span>今日团</span>
+				<ul id="x-menu">
+					<li><a href="">鞋包饰品</a></li>
+					<li><a href="">女装</a></li>
+					<li><a href="">母婴童装</a></li>
+					<li><a href="">男装</a></li>
+					<li><a href="">家装家纺</a></li>
+					<li><a href="">食品生鲜</a></li>
+					<li><a href="">手机数码</a></li>
+					<li><a href="">百货</a></li>
+					<li><a href="">家电汽车</a></li>
+					<li><a href="">内衣</a></li>
+					<li><a href="">户外运动</a></li>
+					<li><a href="">美妆</a></li>
+				</ul>
+			</div>
+		</div>
+		<main>
+			<div id="shoes">
+				<div id="shoes-women">
+					<div id="women-top">
+						<span>大牌女鞋</span>
+					</div>
+					<div id="women-list">
+						<div id="img-left">
+							<img src="img/nvxie.jpg"/>
+							<p>
+								<span id="#payment"><em>398</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+						<div id="img-right">
+							<img src="img/nvxie2.jpg"/>
+							<p>
+								<span id="#payment"><em>340</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="shoes-boy">
+					<div id="boy-top">
+						<span>母婴童装</span>
+					</div>
+					<div id="boy-list">
+						<div id="img-left">
+							<img src="img/muying.jpg"/>
+							<p>
+								<span id="#payment"><em>6789</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+						<div id="img-right">
+							<img src="img/muying2.jpg"/>
+							<p>
+								<span id="#payment"><em>2347</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="shoes-men">
+					<div id="men-top">
+						<span>大牌男装</span>
+					</div>
+					<div id="men-list">
+						<div id="img-left">
+							<img src="img/nanzhuang.jpg"/>
+							<p>
+								<span id="#payment"><em>3989</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+						<div id="img-right">
+							<img src="img/nanzhuang2.jpg"/>
+							<p>
+								<span id="#payment"><em>3447</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="shoes-phone">
+					<div id="phone-top">
+						<span>手机数码</span>
+					</div>
+					<div id="phone-list">
+						<div id="img-left">
+							<img src="img/phone.jpg"/>
+							<p>
+								<span id="#payment"><em>6789</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+						<div id="img-right">
+							<img src="img/phone2.jpg"/>
+							<p>
+								<span id="#payment"><em>2347</em>件已付款</span>
+								<span id="only">仅剩2天</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div id="last">
+				<ul id="last-nav">
+					<li>聚划算</li>
+					<li>
+						关于聚划算
+						<p>帮助中心</p>
+						<p>诚聘精英</p>
+						<p>法律声明</p>
+					</li>
+					<li>卖家中心<p>在线答疑</p><p>服务保障</p></li>
+					<li>买家中心<p>在线咨询</p><p>商家报名</p><p>商家规定</p><p>规则通知</p></li>
+					<li>有话要说<p>客服热线</p><p>廉政举报</p><p>我要投诉</p></li>
+					<li>服务保障<p>全场包邮</p><p>七天无理由退货</p></li>
+				</ul>
+			</div>
+		</footer>
+		<div class="Top" style="width: 30px;height:30px; text-align: center;line-height: 30px; position: fixed; right: 20px;top: 400px; border: 1px #FD3F31 solid; color: #FD3F31; cursor: pointer; border-radius: 50%; display: none;">
+        	↑
+    	</div>
+	</body>
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="module">
+    import {Slider} from "./js/slider.js";
+    window.onload = function(){
+    	let s1 = new Slider(document.getElementById("rotation-box"),{
+    		douWidth:10,
+    		douHeight:5,
+    		timeLong:3000
+    	})
+    }
+	
+	$('.Top').click(function() {
+			$("html,body").animate({scrollTop:0},1100); 
+		})
+	 $(".Top").mouseover(function () {
+		       $(".Top").css({color:'white',background:'#FD3F31'});
+		    }).mouseout(function () {
+		    	$(".Top").css({color:'#FD3F31',background:'white'});
+            })
+            //返回顶部显示
+		$(window).on('scroll',function(){
+		    var $scroll=$(this).scrollTop();
+		    if($scroll>=120){
+		        $('.Top').show();
+		    }else{
+		        $('.Top').hide();
+		    }
+		})
+</script>

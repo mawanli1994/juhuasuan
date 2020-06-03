@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			body{
+				
+			}
+			/*.logo{
+				height: 150px;
+			}
+			.logo img{
+				width: 300px;
+				height: 150px;
+				float: left;
+				margin-left: 100px;
+			}*/
+			.box{
+				width: 100%;
+				height: 498px;
+				background-image: url(img/bbjj.jpg);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				position: relative;
+								
+			}
+			#sign{
+				width: 450px;
+				height: 225px;
+				background-color: white;
+				position: absolute;
+				left: 775px;
+				top: 215px;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 20px;
+			}
+			p{
+				text-align: center;
+				font-size: 30px;
+			}
+			#use{
+				position: absolute;
+				left: 60px;
+				top: 75px;
+			}
+			#user{
+				position: absolute;
+				left: 140px;
+				top: 70px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#pas{
+				position: absolute;
+				left: 60px;
+				top: 125px;
+			}
+			#pass{
+				position: absolute;
+				left: 140px;
+				top: 120px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#cod{
+				position: absolute;
+				left: 60px;
+				top: 175px;
+			}
+			#code{
+				position: absolute;
+				left: 140px;
+				top: 170px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#codeSpan{
+				position: absolute;
+				left: 410px;
+				top: 175px;
+			}
+			#btn{
+				position: absolute;
+				left: 75px;
+				top: 220px;
+				background-color: red;
+				color: white;
+				border: none;
+				font-weight: bold;
+				width: 250px;
+				height: 30px;
+				padding: 2px;
+			}
+			#forget{
+				font-size: 12px;
+				position: absolute;
+				left: 345px;
+				top: 236px;
+			}
+			#forget a{
+				color: red;
+			}
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				height: 128px;
+				background: #F3F3F3;
+			}
+			#last{
+				width: 1196px;
+				height: 120px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				line-height: 140px;
+			}
+			#last-nav li{
+				float: left;
+				margin-left: 80px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #666;
+			}
+			#last-nav li:hover{
+				color: red;
+			}	
+					
+			/*#last-nav li:first-child{
+				font-weight: bold;
+				font-size: 24px;				
+			}*/
+			#last-nav li img{
+				width: 200px;
+				height: 80px;
+				float: left;
+				margin-top: 20px;
+			}
+			
+			.box1{width: 20px;height: 20px;background-image: url(img/shan.jpg); background-size:30px 30px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div id="sign">
+				<p>登&nbsp;&nbsp;&nbsp;录</p>
+				<span id="use">账&nbsp;&nbsp;&nbsp;号：</span><input type="text" id="user" placeholder="请输入用户名"/><br />
+				<span id="pas">密&nbsp;&nbsp;&nbsp;码：</span><input type="password" id="pass" placeholder="请输入密码"/><br />
+				<span id="cod">验证码：</span><input type="text" id="code" placeholder="请输入验证码"/>
+				<span id="codeSpan"></span><br />
+				<input type="button" value="登&nbsp;&nbsp;&nbsp;录" id="btn"/>
+				<span id="forget"><a href="register.html">忘&nbsp;记&nbsp;密&nbsp;码&nbsp;?</a></span>
+				<div id="message-box"></div>
+			</div>
+		</div>
+		<footer>
+			<div id="last">
+				<ul id="last-nav">
+					<li><img src="img/zt.jpg"/></li>
+					<li id="pad">
+						关于聚划算
+					</li>
+					<li>卖家中心</li>
+					<li>买家中心</li>
+					<li>有话要说</li>
+					<li>服务保障</li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
+<script src="js/move.2.0.js"></script>
+<script src="js/yinghuochong.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/xuzeqi.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+	window.onload = function(){
+//		产生验证码
+		showCode();
+//		点击span重新产生验证码
+		$("#codeSpan").onclick = function(){
+			showCode();
+			$("#codeSpan").innerHTML = code;			
+//			把验证码发到后端
+			sendCode(code);
+		}
+//		登录
+		$("#btn").onclick = function(){
+			if($("#code").value != $("#codeSpan").innerHTML){
+				alert("验证码不正确");
+				showCode();
+				return;
+			}
+			login();
+		}
+	}
+	
+	function showCode(){
+		$("#codeSpan").innerHTML = getCode(5);
+	}
+	function getCode(n){
+		let str = "";
+		for(let i=0;i<n;i++){
+			str += parseInt(Math.random()*10);
+		}
+		return str;
+	}
+	function sendCode(code){
+		ajax({
+			url:"code.php",
+			params:"code="+$("#codeSpan").innerHTML
+		});
+	}
+	function login(){
+		ajax({
+			method:"post",
+			url:"signCheck.php",
+			params:`username=${$("#user").value}&userpass=${$("#pass").value}`,
+			cb:function(result){
+				if(result=="1"){
+					addCookie("username",$("#user").value,7);
+					let count = 3;
+					$("#message-box").innerHTML = `登陆成功,${count}秒后,跳转到<a href="index.html">首页</a>`;
+					let myTimer = setInterval(()=>{
+						count--;
+						if(count == 0){
+							window.clearInterval(myTimer);
+							window.location.href = "index.html;"
+							return;
+						}
+						$("#message-box").innerHTML = "登陆成功,${count}秒后,跳转到<a href='index.html'>首页</a>";
+					},1000);
+				}else{
+					$("#message-box").innerHTML = "登陆失败,用户名或密码不正确";
+					showCode();
+				}
+			}
+		});
+	}
+	
+</script>

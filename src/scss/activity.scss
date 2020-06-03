@@ -1,0 +1,351 @@
+@import "common";
+header{
+                width: 100%;    
+            }
+            #head{
+                width: 940px;
+                height: 82px;
+                margin: 0 auto;
+                position: relative;
+            }
+            #head img{
+                width: 149px;
+                height: 120px;
+                position: absolute;
+                z-index: 999;
+            }
+            #head ul{
+                float: right;
+                margin-top: 22px;
+            }
+            #head li{
+                float: left;
+                width: 68px;
+                height: 25px;
+                text-align: center;
+                line-height: 25px;
+                font-weight: 600;
+            }
+            #head ul a{
+                display: block;
+                border-radius: 5px;
+            }
+            #head ul li a:hover{
+                background: #DCDCDC;
+            }
+            #nav{
+                width: 100%;
+                height: 100px;
+                background-color: #f3f3f3;
+                position: relative;
+                border-bottom:2px solid silver;
+                border-top:2px solid silver;                
+            }
+            #today{
+                width: 940px;
+                height: 50px;
+                position: absolute;
+                margin-top: 40px;
+                margin-left: 213px;
+            }
+            #today span{
+                float: left;
+                font-size: 18px;
+                font-weight: bold;
+                width: 72px;
+                height: 25px;
+                border-right: 2px solid silver;
+                margin-top: 20px;
+            }
+            #today #x-menu{
+                float: left;
+                margin-left: 20px;
+            }
+            #today #x-menu li{
+                float: left;
+                margin-top: 25px;
+                margin-left: 16px;
+            }
+            #today #x-menu li a{
+                font-size: 14px;
+            }
+            #today #x-menu li a:hover{
+                color: red;
+            }
+            main{
+                width: 100%;
+                background-color: #F3F3F3;
+            }
+            #shoes{
+                width: 940px;
+                height: 1200px;
+                margin: 0 auto;
+            }
+            #shoes-women{
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+            #women-top{
+                width: 100%;
+                height: 60px;
+                background-color: #FA2960;
+                position: absolute;
+                top: 10px;
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                font-size: 24px;
+            }
+            #women-list{
+                width: 100%;
+                height: 220px;
+                position: absolute;
+                top: 80px;
+            }           
+            #women-list #img-left{
+                float: left;
+                /*margin-left: 2px;*/
+            }
+            #img-left:hover{
+                border: 2px solid red;
+            }
+            #img-left p{
+                width: 464px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #women-list em{
+                color: red;
+            }
+            
+            #only{
+                color: red;
+                float: right;
+                margin-right: 5px;
+            }
+            #women-list #img-right{
+                float: right;
+                /*margin-right: 3px;*/
+            }
+            #img-right:hover{
+                border: 2px solid red;
+            }
+            #img-right p{
+                width: 466px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #shoes-men{
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+            #men-top{
+                width: 100%;
+                height: 60px;
+                background-color: #FA2960;
+                position: absolute;
+                top: 10px;
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                font-size: 24px;
+            }
+            #men-list{
+                width: 100%;
+                height: 220px;
+                position: absolute;
+                top: 80px;
+            }           
+            #men-list #img-left{
+                float: left;
+            }
+            #img-left:hover{
+                border: 2px solid red;
+            }
+            #img-left p{
+                width: 464px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #men-list em{
+                color: red;
+            }           
+            #only{
+                color: red;
+                float: right;
+                margin-right: 5px;
+            }
+            #men-list #img-right{
+                float: right;
+            }
+            #img-right:hover{
+                border: 2px solid red;
+            }
+            #img-right p{
+                width: 466px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #shoes-boy{
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+            #boy-top{
+                width: 100%;
+                height: 60px;
+                background-color: #FA2960;
+                position: absolute;
+                top: 10px;
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                font-size: 24px;
+            }
+            #boy-list{
+                width: 100%;
+                height: 220px;
+                position: absolute;
+                top: 80px;
+            }           
+            #boy-list #img-left{
+                float: left;
+            }
+            #img-left:hover{
+                border: 2px solid red;
+            }
+            #img-left p{
+                width: 464px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #boy-list em{
+                color: red;
+            }           
+            #only{
+                color: red;
+                float: right;
+                margin-right: 5px;
+            }
+            #boy-list #img-right{
+                float: right;
+            }
+            #img-right:hover{
+                border: 2px solid red;
+            }
+            #img-right p{
+                width: 466px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #shoes-phone{
+                width: 100%;
+                height: 300px;
+                position: relative;
+            }
+            #phone-top{
+                width: 100%;
+                height: 60px;
+                background-color: #FA2960;
+                position: absolute;
+                top: 10px;
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                font-size: 24px;
+            }
+            #phone-list{
+                width: 100%;
+                height: 220px;
+                position: absolute;
+                top: 80px;
+            }           
+            #phone-list #img-left{
+                float: left;
+            }
+            #img-left:hover{
+                border: 2px solid red;
+            }
+            #img-left p{
+                width: 464px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            #phone-list em{
+                color: red;
+            }           
+            #only{
+                color: red;
+                float: right;
+                margin-right: 5px;
+            }
+            #phone-list #img-right{
+                float: right;
+            }
+            #img-right:hover{
+                border: 2px solid red;
+            }
+            #img-right p{
+                width: 466px;
+                height: 30px;
+                background: white;
+                margin-top: -2px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            
+            
+            
+            /*底部*/
+            footer{
+                width: 100%;
+                border-top: 4px solid #ccc; 
+            }
+            #last{
+                width: 1196px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            #last-nav{
+                float: left;
+                margin-top: 50px;
+            }
+            #last-nav li{
+                float: left;
+                margin-right: 120px;
+                font-size: 14px;
+                color: #666;
+            }
+            #last-nav li p{
+                font-size: 12px;
+                margin-top: 30px;
+                color: #666;
+            }
+            #last-nav li:first-child{
+                font-weight: bold;
+                font-size: 24px;
+                
+            }

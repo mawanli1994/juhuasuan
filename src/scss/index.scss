@@ -1,0 +1,476 @@
+/*导航*/      
+            head{
+                width: 100%;
+                background-color: #F3F3F3;
+            }
+            .top{
+                width: 1196px;
+                height: 30px;
+                margin: 0 auto;
+                font-size: 13px;
+                line-height: 30px;
+            }
+            .topLand{
+                float: left;                
+            }
+            .topLand li{
+                float: left;
+                padding-left: 10px;
+            }
+            .topLand a:hover{
+                color: red;
+            }
+            .topNavigation >ul{
+                float: right;
+            }
+            .topNavigation>ul >li{
+                float: left;
+                padding-left: 20px;
+            }
+            .topNavigation .taobao{
+                position: relative;
+                display: block;
+                width: 72px;
+                height: 30px;
+            }
+            .taobao:hover{
+                background-color: #fff;
+            }
+            .topNavigation .arroe{
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
+                transform: rotate(-45deg);
+                position: absolute;
+                right: 8px;
+                top: 12px;
+            }
+            .arroe:hover{
+                border-color: red;
+            }
+            .topNavigation .menu{
+                position: absolute;
+                right: 180px;
+                top: 30px;
+                border: 1px solid #DCDCDC;
+                border-top: none;
+                background-color: #FFF;
+                width: 85px;
+                display: none;
+            }
+            .topNavigation .menu li{
+                height: 25px;
+                margin-left: 5px;
+            }
+            .topNavigation .menu a{
+                font-size: 12px;                
+            }
+            .mytaobao:hover .menu{
+                display: block;
+            }
+            .topNavigation a:hover{
+                color: red;
+            }
+            .xnav{
+                width: 1196px;
+                height: 80px;
+                margin: 0 auto;
+                position: relative;
+            }
+            .xnav img{
+                width: 149px;
+                height: 120px;
+                position: absolute;
+                z-index: 999;
+            }
+            .xnav ul{
+                float: right;
+                margin-top: 22px;
+            }
+            .xnav li{
+                float: left;
+                width: 68px;
+                height: 25px;
+                text-align: center;
+                line-height: 25px;
+                font-weight: 600;
+            }
+            .xnav .write{
+                color: #fff;
+                background: red;
+                display: block;
+                border-radius: 5px;
+            }
+            .xnav ul a{
+                display: block;
+                margin-left: 2px;
+                border-radius: 5px;
+            }
+            .xnav ul li a:hover{
+                background: #DCDCDC;
+            }
+            .xnav .write:hover{
+                background: red;
+            }
+            /*轮播*/
+            #nav{
+                width: 100%;
+                height: 438px;
+                background-color: red;
+            }
+            #Rotation{
+                width: 1196px;
+                height: 438px;
+                position: relative;
+                margin: 0 auto;
+            }
+            /*左菜单*/
+            #leftMenu{
+                width: 149px;
+                height: 265px;
+                background: white;
+                position: absolute;
+            }
+            #leftMenu #one{
+                float: left;
+                margin-top: 30px;
+            }
+            #leftMenu #one li{
+                width: 54px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 5px;
+                padding-bottom: 4px;
+                margin-top: 22px;
+                margin-left: 18px;
+            }
+            #leftMenu #one li:hover{
+                background-color: red;
+            }
+            #leftMenu #one a:hover{
+                color: white;
+            }
+            #leftMenu #one a{
+                font-size: 12px;                
+            }
+            #leftMenu #two{
+                float: right;
+                margin-top: 30px;
+            }
+            #leftMenu #two li{
+                width: 30px;
+                height: 18px;
+                line-height: 18px;
+                padding-left: 5px;
+                padding-bottom: 4px;
+                margin-top: 22px;
+                margin-right: 18px;
+            }
+            #leftMenu #two li:hover{
+                background-color: red;
+            }
+            #leftMenu #two a{
+                font-size: 12px;
+            }
+            #leftMenu #two a:hover{
+                color: white;
+            }
+            #notice{
+                width: 149px;
+                height: 48px;
+                border-top: 1px dotted #DCDCDC;
+                border-bottom: 1px dotted #DCDCDC;
+                background-color: white;
+                position: absolute;
+                top: 265px;         
+            }
+            #notice span{
+                font-size: 14px;
+                color: lightgreen;
+                display: inline-block;
+                width: 60px;
+                height: 20px;
+                float: left;
+                margin-left: 6px;   
+                margin-top: 15px;
+                padding-top: 4px;
+                padding-left: 4px;                      
+            }
+            #notice span:hover{
+                background-color: lightgreen;
+                color: white;
+            }
+            #service{
+                width: 149px;
+                height: 123px;
+                background-color: white;
+                position: absolute;
+                top: 315px;
+            }
+            #service p{
+                float: left;
+                font-size: 14px;
+                color: gray;
+                margin-left: 25px;
+                margin-top: 25px;
+            }
+            /*轮播图*/
+            #rotation-box{
+                width: 792px;
+                height: 290px;
+                border: 5px solid crimson;
+                background-color: antiquewhite;
+                position: absolute;
+                left: 149px;
+                overflow: hidden;
+            }
+            
+            #rotation-bottom{
+                width: 792px;
+                height: 138px;
+                border-left: 5px solid crimson;
+                border-right: 5px solid crimson;
+                background-color: sienna;
+                position: absolute;
+                left: 149px;
+                top: 300px;
+                display: flex;
+            }
+            #rotation-bottom div{
+                width: 264px;
+                height: 100%;
+                flex: 1;
+                background: salmon;
+            }
+            #rotation-bottom div img{
+                width: 100%;
+                height: 100%;
+            }
+            
+            #rotation-right{
+                width: 240px;
+                height: 433px;
+                border-top: 5px solid crimson;
+                border-right: 5px solid crimson;
+                background: #98FB98;
+                position: absolute;
+                left: 951px;
+            }
+            #rotation-right img{
+                width: 100%;
+                height: 100%;
+            }
+            /*主要内容*/
+            main{
+                width: 100%;
+                background-color: aquamarine;
+            }
+            #content{
+                width: 1196px;
+                height: 1504px;
+                margin: 0 auto;
+                position: relative;
+            }
+            #brand{
+                width: 100%;
+                height: 70px;
+                background-color: #FA8072;
+                position: absolute;
+            }
+            #brand #brand-left{
+                float: left;
+                width: 220px;
+                height: 70px;
+                background-color: white;
+            }
+            #brand-left span{
+                display: inline-block;
+                float: left;                
+            }
+            #brand-left #large{
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: 27px;
+            }
+            #brand-left #small{
+                font-size: 12px;
+                color: white;
+                background-color: #000;
+                width: 140px;
+                height: 18px;
+                line-height: 18px;
+                border: 1px solid #000;
+                margin-top: 27px;
+                margin-left: 5px;
+                padding-left: 8px;
+            }
+            
+            #brand #brand-right{
+                float: right;
+                background-color: white;
+                width: 976px;
+                height: 70px;
+            }
+            #brand-right ul{
+                float: right;
+            }
+            #brand-right ul li{
+                float: left;
+                margin-left: 10px;
+                margin-top: 30px;
+            }
+            #brand-right ul li a{
+                font-size: 12px;
+            }
+            #brand-right ul li a:hover{
+                color: red;
+            }
+            #brand-right #brand-all{
+                width: 90px;
+                height: 16px;
+                background-color: red;
+            }
+            #brand-right #brand-all a{
+                font-size: 14px;
+                padding-left: 10px;
+                color: white;
+            }
+            
+            #img-list{
+                width: 1196px;
+                height: 185px;
+                position: absolute;
+                top: 70px;              
+                display: flex;
+            }
+            #img-list div{
+                border: 2px solid white;
+            }
+            #img-list div img{
+                width: 393px;
+                height: 160px;
+                flex: 1;
+            }
+            #img-list p{
+                flex: 1;
+                height: 18px;               
+                background-color:#F3F3F3;
+                font-size: 12px;
+                line-height: 18px;
+                position: relative;
+            }
+            p #payment{
+                position: absolute;
+                left: 240px;
+            }
+            p #only{
+                position: absolute;
+                left: 343px;
+            } 
+            #img-list em, #only{
+                color: red;
+            }
+            #img-list div:hover{
+                border: 2px solid brown;                
+            }
+            #today{
+                width: 100%;
+                height: 50px;
+                position: absolute;
+                top: 255px;
+                background-color: hotpink;
+            }
+            #today span{
+                float: left;
+                font-size: 18px;
+                font-weight: bold;
+                width: 72px;
+                height: 25px;
+                border-right: 1px solid #ccc;
+                margin-top: 20px;
+            }
+            #today #x-menu{
+                float: left;
+                margin-left: 20px;
+            }
+            #today #x-menu li{
+                float: left;
+                margin-top: 25px;
+                margin-left: 16px;
+            }
+            #today #x-menu li a{
+                font-size: 14px;
+            }
+            #today #x-menu li a:hover{
+                color: red;
+            }
+            /*商品类*/
+            #product-list{
+                width: 1196px;
+                height: 1200px;
+                position: absolute;
+                top: 305px;
+                background: peachpuff;
+            }
+            #product-list .goods{
+                width: 230px;
+                margin-top:10px;
+                float: left;
+                border: solid 2px #ccc;
+                box-sizing: border-box;
+                text-align: center;
+                margin-left: 7.5px;
+            }
+            .goods img{
+                width: 80%;
+            }
+            #product-list .goods:hover{
+                border: 2px solid red;
+            }
+            .goods span{
+                display: block;
+                margin: 10px 0;
+            }
+            .goods p{
+                margin: 0;
+                height: 40px;
+                line-height: 20px;
+                overflow: hidden;
+            }
+            .goods input{
+                display: block;
+                padding: 2px;
+                margin: 0 auto;
+            }
+            /*底部*/
+            footer{
+                width: 100%;
+                border-top: 4px solid #ccc; 
+            }
+            #last{
+                width: 1196px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            #last-nav{
+                float: left;
+                margin-top: 50px;
+            }
+            #last-nav li{
+                float: left;
+                margin-right: 120px;
+                font-size: 14px;
+                color: #666;
+            }
+            #last-nav li p{
+                font-size: 12px;
+                margin-top: 30px;
+                color: #666;
+            }
+            #last-nav li:first-child{
+                font-weight: bold;
+                font-size: 24px;
+                
+            }

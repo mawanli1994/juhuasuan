@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style>
+			header{
+				width: 100%;
+			}
+			#head{
+				width: 990px;
+				height: 92px;
+				margin: 0 auto;
+			}
+			#head img{
+				width: 240px;
+				height: 40px;
+				float: left;
+				margin-top: 26px;
+			}
+			#head input{
+				float: left;
+			}
+			#user{
+				width: 400px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 12px;
+				border: 2px solid red;
+				margin-left: 267px;
+				margin-top: 30px;
+				padding: 5px 3px 5px 5px;
+			}
+			#btn{
+				width: 70px;
+				height: 34px;
+				border: none;
+				color: white;
+				background-color: red;
+				margin-top: 30px;
+			}
+			main{
+				width: 100%;
+			}
+			#activity{
+				width: 1349px;
+				height: 450px;
+				background-image: url(img/lu-1.jpg);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			#cont{
+				width: 990px;
+				height: 450px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#tmall{
+				font-size: 72px;
+				font-weight: bold;
+				color: white;
+				position: absolute;
+				left: 30px;
+				top: 85px;
+			}
+			#two{
+				font-size: 32px;
+				color: white;
+				position: absolute;
+				left: 30px;
+				top: 160px;
+			}
+			#list{
+				width: 500px;
+				height: 160px;
+				position: absolute;
+				left: 30px;
+				top: 230px;
+				display: flex;
+			}
+			#list img{
+				flex: 1;
+				width: 160px;
+				height: 160px;
+			}
+			#imgs{
+				width: 375px;
+				height: 350px;
+				position: absolute;
+				left: 610px;
+				top: 95px;
+			}
+			#imgs img{
+				width: 375px;
+				height: 440px;
+				float: left;
+				margin-top: -90px;
+			}
+			/*商品列表*/
+			#product-list{
+				width: 990px;
+				height: 1200px;
+				margin: 0 auto;
+				background: peachpuff;
+			}
+			#product-list .goods{
+				width: 240px;
+				margin-top:10px;
+				float: left;
+				border: solid 2px #ccc;
+				box-sizing: border-box;
+				text-align: center;
+				margin-left: 7.5px;
+			}
+	        .goods img{
+	        	width: 80%;
+        	}
+	        #product-list .goods:hover{
+	        	border: 2px solid red;
+        	}
+	        .goods span{
+	        	display: block;
+	        	margin: 10px 0;
+        	}
+	        .goods p{
+	        	margin: 0;
+	        	height: 40px;
+	        	line-height: 20px;
+	        	overflow: hidden;
+        	}
+	        .goods input{
+	        	display: block;
+	        	padding: 2px;
+	        	margin: 0 auto;
+        	}
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				border-top: 4px solid #ccc;	
+			}
+			#last{
+				width: 990px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				margin-top: 50px;
+			}
+			#last-nav li{
+				float: left;
+				margin-right: 90px;
+				font-size: 14px;
+				color: #666;
+			}
+			#last-nav li p{
+				font-size: 12px;
+				margin-top: 30px;
+				color: #666;
+			}
+			#last-nav li:first-child{
+				font-weight: bold;
+				font-size: 24px;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="head">
+				<img src="img/jjjjj.jpg"/>
+				<input type="text" placeholder="商品/品牌/店铺" id="user"/>
+				<input type="button" value="搜索" id="btn"/>
+			</div>
+		</header>
+		<main>
+			<div id="activity">
+				<div id="cont">
+					<p id="tmall">天猫国际</p>
+					<p id="two">第二件0元</p>
+					<div id="list">
+						<img src="//gw.alicdn.com/bao/uploaded/TB1f1HxhsKfxu4jSZPfXXb3dXXa.jpg_Q75.jpg" alt="" />
+						<img src="//gw.alicdn.com/bao/uploaded/TB1jSo7GqL7gK0jSZFBXXXZZpXa.jpg_Q75.jpg" alt="" />
+						<img src="//gw.alicdn.com/bao/uploaded/TB2noSejyMnBKNjSZFoXXbOSFXa_!!6000000005520-2-at.png" alt="" />
+					</div>
+					<div id="imgs">
+						<img src="//gw.alicdn.com/tfs/TB1l5wpHQY2gK0jSZFgXXc5OFXa-380-450.png"/>
+					</div>
+				</div>
+			</div>
+			<div id="product-list">
+				
+			</div>
+		</main>
+		<footer>
+			<div id="last">
+				<ul id="last-nav">
+					<li>聚划算</li>
+					<li>
+						关于聚划算
+						<p>帮助中心</p>
+						<p>诚聘精英</p>
+						<p>法律声明</p>
+					</li>
+					<li>卖家中心<p>在线答疑</p><p>服务保障</p></li>
+					<li>买家中心<p>在线咨询</p><p>商家报名</p><p>商家规定</p><p>规则通知</p></li>
+					<li>有话要说<p>客服热线</p><p>廉政举报</p><p>我要投诉</p></li>
+					<li>服务保障<p>全场包邮</p><p>七天无理由退货</p></li>
+				</ul>
+			</div>
+		</footer>
+		<div class="Top" style="width: 100px;height:160px; text-align: center;line-height: 30px; position: fixed; right: 20px;top: 400px; border: 1px white solid; color: #FD3F31; cursor: pointer; display: none;">
+        	<img src="img/erweima.jpg" style="width: 100px; height: 160px;"/>
+    	</div>
+	</body>
+</html>
+<script type="module">
+    import {Slider} from "./js/slider.js";
+    window.onload = function(){
+    	let s1 = new Slider(document.getElementById("rotation-box"),{
+    		douWidth:10,
+    		douHeight:5,
+    		timeLong:3000
+    	})
+    }
+	
+	$('.Top').click(function() {
+			$("html,body").animate({scrollTop:0},1100); 
+		})
+	 $(".Top").mouseover(function () {
+		       $(".Top").css({color:'white',background:'#FD3F31'});
+		    }).mouseout(function () {
+		    	$(".Top").css({color:'#FD3F31',background:'white'});
+            })
+            //返回顶部显示
+		$(window).on('scroll',function(){
+		    var $scroll=$(this).scrollTop();
+		    if($scroll>=120){
+		        $('.Top').show();
+		    }else{
+		        $('.Top').hide();
+		    }
+		})
+</script>
