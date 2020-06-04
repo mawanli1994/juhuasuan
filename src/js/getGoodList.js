@@ -11,20 +11,13 @@ function getGoodslist(typeId){
 	    						<div class="goods">
 		                            <a href="product-details.html?goodsId=${goods.goodsId}"><img src="${goods.goodsImg}" alt=""></a>
 		                            <span>¥ ${goods.goodsPrice}</span>
-		                            <p>${goods.goodsCount}</p>
-//		                            <input type="button" value="加入购物车" class="add">
+		                            <p>${goods.goodsDesc}</p>
 		                        </div>
 	    					`
 			})
         $("#product-list").html(htmlStr);
     },"json");
 }
-//`<div class="goods" index="${this.data[i].goodsId}">
-//  <img src="${this.data[i].img}" alt="">
-//  <span>${this.data[i].price}</span>
-//  <p>${this.data[i].name}</p>
-//  <input type="button" value="加入购物车" class="add">
-//</div>`
 
 $(function(){
     getGoodslist();
@@ -35,3 +28,23 @@ $(function(){
         getGoodslist('002')
     });
 })
+
+
+//回到顶部
+$('.Top').click(function() {
+			$("html,body").animate({scrollTop:0},1100); 
+		})
+	 $(".Top").mouseover(function () {
+		       $(".Top").css({color:'white',background:'#FD3F31'});
+		    }).mouseout(function () {
+		    	$(".Top").css({color:'#FD3F31',background:'white'});
+            })
+            //返回顶部显示
+		$(window).on('scroll',function(){
+		    var $scroll=$(this).scrollTop();
+		    if($scroll>=120){
+		        $('.Top').show();
+		    }else{
+		        $('.Top').hide();
+		    }
+		})

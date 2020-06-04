@@ -12,6 +12,7 @@ export class Slider {
         this.leftArrow = null;//左箭头
         this.rightArrow = null;//右箭头
 
+
         // 属性
         let defaultObj = {
             width: this.boxDom.offsetWidth,
@@ -249,8 +250,8 @@ export class Slider {
 
         // 处理失去焦点和获取焦点
         window.addEventListener("blur",()=>{
-            console.log("停止");
-            console.log(this);
+//          console.log("停止");
+//          console.log(this);
             this.stopPlay();
         });
         
@@ -261,3 +262,166 @@ export class Slider {
         });
     }
 }
+
+//时间
+var box=document.getElementById("time");
+ box.innerHTML= change(new Date);
+ setInterval(function(){
+	  box.innerHTML= change(new Date);
+	 },1000)
+	 
+	 function change(d){
+	  var y=d.getFullYear();
+	  var m=d.getMonth()+1;
+	  var r=d.getDate();
+	  var w=d.getDay();
+	  var h=d.getHours();
+	  var mm=d.getMinutes();
+	  var s=d.getSeconds();
+	  
+	  switch(w){
+	   case 0:
+	    w="星期日";break;
+	   case 1:
+	    w="星期一";break;
+	   case 2:
+	    w="星期二";break;
+	   case 3:
+	    w="星期三";break;
+	   case 4:
+	    w="星期四";break;
+	   case 5:
+	    w="星期五" ;break;
+	   case 6:
+	    w="星期六";break;
+	  }
+	  var str=y+"年"+createzero(m)+"月"+r+"日 "+ w+" "+createzero(h)+":"+createzero(mm)+":"+createzero(s)+"";
+	  return str;
+	 }
+	 function createzero(n){
+	  return n>=10?""+ n:"0"+n;
+	 }
+	 createzero();
+
+
+
+
+//欢迎语
+$(function(){
+		showwelcomeOrLogin();
+		$("#btnLogout").click(function(){
+			removeCookie("username");
+			showwelcomeOrLogin();
+		})
+	})
+	function showwelcomeOrLogin(){
+		 let username = getCookie("username");
+	    if (username == null) {
+	        $("#login-box").css("display", "block");
+	        $("#welcome-box").css("display", "none");
+	    }
+	    else {
+	        $("#welcome-box").css("display", "block");
+	        $("#login-box").css("display", "none");
+	        $("#userSpan").html(username);
+	    }
+
+	}
+	
+
+//萤火虫
+class Glowworm{
+	    constructor(){
+	    	var k = document.getElementById("xinpin");
+	        // 获取屏幕的可视区域的宽高，用作将来的随机范围
+	        this.clientW = k.offsetWidth;
+	        this.clientH = k.offsetHeight;
+	        // 假设萤火虫的宽高
+	        this.w = 20;
+	        this.h = 20;
+	    }
+	    createEle(){
+	        var div = document.createElement("div");
+	        div.className = "box1";
+	        document.getElementById("xinpin").appendChild(div);
+	        // 在创建元素之前一定得先生成随机坐标
+	        div.style.left = this.x + "px";
+	        div.style.top = this.y + "px";
+	        // 元素创建好之后，需要立即运动
+	        this.move(div);
+	    }
+	    randomPos(){
+	        // 随机生成坐标
+	        this.x = random(0,this.clientW - this.w);
+	        this.y = random(0,this.clientH - this.h);
+	    }
+	    move(ele){
+	        // 开始运动之前，还得随机生成目标
+	        this.randomPos();
+	        // 开始运动
+	        move(ele,{
+	            left:this.x,
+	            top:this.y
+	        },()=>{
+	            // 一个动画结束后，重复开启当前动画，即可
+	            this.move(ele);
+	        })
+	    }
+	}
+	
+	
+	for(var i=0;i<50;i++){
+	    // 先得到实例
+	    var g = new Glowworm();
+	    // 生成随机坐标
+	    g.randomPos();
+	    // 再创建元素
+	    g.createEle();
+	}
+	
+	
+	
+	function move(ele,obj,cb){		//参数2被修改成对象，使用之前需要解析（遍历）
+		clearInterval(ele.t);
+		ele.t = setInterval(() =>{
+			var i = true;
+			for(var attr in obj){
+				if(attr == "opacity"){
+					var iNow = getStyle(ele,attr) * 100;
+				}else{
+					var iNow = parseInt(getStyle(ele,attr));
+				}
+				let speed = (obj[attr] - iNow)/10;
+				speed = speed < 0 ? Math.floor(speed) : Math.ceil(speed);
+				if(iNow !== obj[attr]){
+					i = false;
+				}
+				if(attr == "opacity"){
+					ele.style.opacity = (iNow + speed)/100;
+				}else{
+					ele.style[attr] = iNow + speed + "px";
+				}
+			}
+			if(i){
+				clearInterval(ele.t);
+				if(cb){
+					cb();
+				}
+			}
+		},100);
+	}
+	
+	function getStyle(ele,attr){
+    if(ele.currentStyle){
+        return ele.currentStyle[attr];
+    }else{
+        return getComputedStyle(ele,false)[attr];
+    }
+}
+	
+	
+	function random(a,b){
+	    return Math.round(Math.random()*(a-b)+b);
+	}
+
+

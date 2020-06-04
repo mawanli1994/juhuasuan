@@ -1,0 +1,200 @@
+			header{
+				width: 100%;	
+			}
+			#head{
+				width: 940px;
+				height: 82px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			
+			
+			#head img{
+				width: 149px;
+				height: 120px;
+				position: absolute;
+				z-index: 999;
+			}
+			#head ul{
+				float: right;
+				margin-top: 22px;
+			}
+			#head li{
+				float: left;
+				width: 68px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				font-weight: 600;
+			}
+			#head ul a{
+				display: block;
+				border-radius: 5px;
+			}
+			#head ul li a:hover{
+				background: #DCDCDC;
+			}
+			
+			#register{
+				width: 100%;
+				height: 400px;
+				background-image: url(../img/bjt.jpg);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				position: relative;
+			}
+			#box{
+				width: 380px;
+				height: 320px;
+				background-color: white;
+				position: absolute;
+				left: 900px;
+				top: 20px;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 20px;
+			}
+			#box-p{
+				text-align: center;
+				font-size: 30px;
+			}
+			p{
+				font-size: 12px;
+				color: red;
+			}
+			#use{
+				position: absolute;
+				left: 25px;
+				top: 100px;
+			}
+			#user{
+				position: absolute;
+				left: 125px;
+				top: 95px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#one{
+				position: absolute;
+				left: 125px;
+				top: 125px;
+			}
+			#pas{
+				position: absolute;
+				left: 25px;
+				top: 150px;
+			}
+			#pass{
+				position: absolute;
+				left: 125px;
+				top: 145px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#two{
+				position: absolute;
+				left: 125px;
+				top: 175px;
+			}
+			#pas2{
+				position: absolute;
+				left: 25px;
+				top: 200px;
+			}
+			#pass2{
+				position: absolute;
+				left: 125px;
+				top: 195px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#three{
+				position: absolute;
+				left: 125px;
+				top: 225px;
+			}
+			#sex{
+				position: absolute;
+				left: 25px;
+				top: 250px;
+			}
+			#sex1{
+				position: absolute;
+				left: 120px;
+				top: 250px;
+			}
+			#women{
+				position: absolute;
+				left: 140px;
+				top: 250px;
+			}
+			#sex2{
+				position: absolute;
+				left: 170px;
+				top: 250px;
+			}
+			#men{
+				position: absolute;
+				left: 190px;
+				top: 250px;
+			}
+			#btn{
+				position: absolute;
+				left: 60px;
+				top: 300px;
+				font-weight: bold;
+				font-size: 20px;
+				width: 300px;
+				height: 32px;
+				background-color: red;
+				border: none;
+				line-height: 32px;
+			}
+			#message-box{
+				position: absolute;
+				top: 340px;
+				left: 60px;
+				width: 300px;
+				height: 20px;
+				font-size: 12px;
+				background: #fff;
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				height: 120px;
+				background: #ccc;
+			}
+			#last{
+				width: 1196px;
+				height: 120px;
+				background: #CCCCCC;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				line-height: 120px;
+			}
+			#last-nav li{
+				float: left;
+				margin-left: 80px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #666;
+			}
+			#last-nav li:hover{
+				color: red;
+			}	
+			#last-nav li img{
+				width: 200px;
+				height: 80px;
+				float: left;
+				margin-top: 20px;
+			}

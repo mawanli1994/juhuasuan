@@ -1,11 +1,4 @@
 
-// 封装运动的函数
-// 运动的要素：
-// 1、路程（起始位置，结束位置），速度（步长，和时间间隔） 时间
-
-// 功能：运动
-// 参数：运动的主体（DOM对象），属性名，起始位置，结束位置，方向，步长，时间间隔
-// 返回值：定时器
 
 function mover01(oDom,  attr, startP, endP,step,direction,  timeSpace) {
     var value = startP;

@@ -4,6 +4,8 @@ function addCookie(key,value,count){
     d.setDate(d.getDate()+count);
     document.cookie = `${key}=${escape(value)};expires=${d.toGMTString()}`;
 }
+
+
 function getCookie(key){
     
     let str = unescape(document.cookie);//获取当前网站所有的cookie（键值对）：ausername=肖阳aaa; username=肖阳; userpass=123

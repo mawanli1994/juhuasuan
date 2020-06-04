@@ -2,63 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>购物车</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-    <style>
-    	body{background-color: #F3F3F3;}
-    	header{
-			width: 100%;				
-			background-color: white;		
-		}
-		#head{
-			width: 940px;
-			height: 82px;
-			margin: 0 auto;
-			position: relative;
-		}
-		#head img{
-			width: 149px;
-			height: 120px;
-			position: absolute;
-			z-index: 999;
-		}
-		#head ul{
-			float: right;
-			margin-top: 22px;
-		}
-		#head li{
-			float: left;
-			width: 68px;
-			height: 25px;
-			text-align: center;
-			line-height: 25px;
-			font-weight: 600;
-		}
-		#head ul a{
-			display: block;
-			border-radius: 5px;
-		}
-		#head ul li a:hover{
-			background: #DCDCDC;
-		}
-		
-		#shopping{
-			width: 940px;
-			min-height: 1000px;
-			margin: 0 auto;
-			padding-top: 50px;
-			text-align: center;
-		}
-			
-        img{width: 100px;height: 100px;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/shopping.css"/>
 </head>
+
 <body>
 	<header>
 		<div id="head">
 			<img src="img/jhs.jpg"/>
 			<ul>
-				<li><a href="" class="write">首页</a></li>
+				<li><a href="index.html" class="write">首页</a></li>
 				<li><a href="">品牌团</a></li>
 				<li><a href="">非常大牌</a></li>
 				<li><a href="">聚名品</a></li>
@@ -67,113 +22,30 @@
 			</ul>
 		</div>			
 	</header>
-	<div id="shopping">
-	    <h2>这是购物车，<a href="2商品列表.html">继续购物</a></h2>
-	    <table border=1 width=800 align="center">
-	        <thead>
-	            <tr>
-	                <th>图片</th>
-	                <th>名字</th>
-	                <th>单价</th>
-	                <th>数量</th>
-	                <th>总价</th>
-	                <th>操作</th>
-	            </tr>
-	        </thead>
-	        <tbody>
-	        </tbody>
-	    </table>
-    </div>
-</body>
-<script>
-    class Car{
-        constructor(){
-            this.tBody = document.querySelector("tbody");
-        }
-        getData(){
-            // 1.立即获取数据
-            if(localStorage.getItem("goodsMsg")){
-                this.gm = JSON.parse(localStorage.getItem("goodsMsg"));
-            }else{
-                this.gm = [];
-            }
-            // 2.渲染页面
-            this.display();
-        }
-        display(){
-            var str = "";
-            // 注意：给将来要添加事件的标签添加独立的标志
-            // 注意：记得将每个商品的编号拼接上去，方便将来删除或修改时找到对应商品
-            for(var i=0;i<this.gm.length;i++){
-                str += `<tr index="${this.gm[i].goodsId}">
-                            <td><img src="${this.gm[i].msg.img}" alt=""></td>
-                            <td>${this.gm[i].msg.name}</td>
-                            <td>${this.gm[i].msg.price}</td>
-                            <td><input type="number" min="1" value="${this.gm[i].num}" class="number"></td>
-                            <td>${ this.gm[i].msg.price * this.gm[i].num }</td>
-                            <td class="delete">删除</td>
-                        </tr>`;
-            }
-            this.tBody.innerHTML = str;
-        }
-        addEvent(){
-            var that = this;
-            // 3.利用事件委托绑定删除事件
-            this.tBody.onclick = function(eve){
-                var e = eve || window.event;
-                var tar = e.target || e.srcElement;
-                if(tar.className === "delete"){
-                    // 4.先获取当前点击删除按钮的商品的id
-                    that.id = tar.parentNode.getAttribute("index");
-                    // 5.删除DOM元素
-                    tar.parentNode.remove();
-                    // 6.删除本地存储中的数据
-                    that.changeData(function(i){
-                        that.gm.splice(i,1);
-                    });
-                }
-            }
- 
-            // 7.通过事件委托绑定修改数量的事件：注意事件类型，的触发行为
-            this.tBody.oninput = function(eve){
-                var e = eve || window.event;
-                var tar = e.target || e.srcElement;
-                if(tar.className === "number"){
-                    // 8.获取要修改数量的商品的id
-                    that.id = tar.parentNode.parentNode.getAttribute("index");
-                    // 9.执行修改本地存储中数据的功能
-                    that.changeData(function(i){
-                        that.gm[i].num = tar.value;
-                    });
- 
-                    // 10.每次修改数量，实时计算总价
-                    // console.log("计算总价");
-                    tar.parentNode.nextElementSibling.innerHTML = tar.value * tar.parentNode.previousElementSibling.innerHTML;
-                }
-            }
-        }
-        changeData(cb){
-            // 根据点击的商品的id查找本地存储的数据中符合的商品数据
-            for(var i=0;i<this.gm.length;i++){
-                if(this.gm[i].goodsId === this.id){
-                    cb(i);
-                    break;
-                }
-            }
-            // var i = 0;
-            // this.gm.some((val,idx)=>{
-            //     i = idx;
-            //     return this.gm[i].goodsId === this.id;
-            // })
-            // this.gm.splice(i,1);
- 
-            // 剔除掉之后，得再存回去，否则仅仅是在内存中修改，没有修改本地存储
-            localStorage.setItem("goodsMsg",JSON.stringify(this.gm));
-        }
-    }
- 
-    var c = new Car();
-    c.getData();
-    c.addEvent();
-</script>
+	<div id="car"><span id="mycar">☆我的购物车☆</span><a href="index.html" id="again"  class="iconfont icon-gouwuchekong">继续购物</a></div>
+		    
+    <table id="shopping" border="1" >
+       
+    </table>
+    <footer>
+			<div id="last">
+				<ul id="last-nav">
+					<li>聚划算</li>
+					<li>
+						关于聚划算
+						<p>帮助中心</p>
+						<p>诚聘精英</p>
+						<p>法律声明</p>
+					</li>
+					<li>卖家中心<p>在线答疑</p><p>服务保障</p></li>
+					<li>买家中心<p>在线咨询</p><p>商家报名</p><p>商家规定</p><p>规则通知</p></li>
+					<li>有话要说<p>客服热线</p><p>廉政举报</p><p>我要投诉</p></li>
+					<li>服务保障<p>全场包邮</p><p>七天无理由退货</p></li>
+				</ul>
+			</div>
+		</footer>
+</body>	
 </html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/cookieTools.js"></script>
+<script src="js/shopping.js"></script>

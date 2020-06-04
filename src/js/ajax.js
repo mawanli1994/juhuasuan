@@ -6,6 +6,7 @@ function ajax(obj){
 		params:"",
 		cb:null
 	}
+	
 	for(let key in obj){
 		defObj[key] = obj[key];
 	}

@@ -5,242 +5,15 @@
 		<title>商品详情</title>
 		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-		<style type="text/css">
-			body{				
-				background-color: #F3F3F3;	
-			}
-			/*头部*/
-			header{
-				width: 100%;				
-				background-color: white;		
-			}
-			#head{
-				width: 940px;
-				height: 82px;
-				margin: 0 auto;
-				position: relative;
-			}
-			#head img{
-				width: 149px;
-				height: 120px;
-				position: absolute;
-				z-index: 999;
-			}
-			#head ul{
-				float: right;
-				margin-top: 22px;
-			}
-			#head li{
-				float: left;
-				width: 68px;
-				height: 25px;
-				text-align: center;
-				line-height: 25px;
-				font-weight: 600;
-			}
-			#head ul a{
-				display: block;
-				border-radius: 5px;
-			}
-			#head ul li a:hover{
-				background: #DCDCDC;
-			}
-			/*商品详情介绍*/
-			main{
-				width: 100%;
-				background-color: #F3F3F3;
-			}
-			#product-details{
-				width: 940px;
-				height: 600px;
-				margin: 0 auto;
-				padding: 30px;
-			}
-			#brand-top{
-				height: 48px;
-				line-height: 48px;
-				border-bottom: 2px #CCCCCC dotted;
-			}
-			#brand{
-				float: left;
-				margin-left: 35px;
-				font-size: 24px;
-				font-weight: bold;
-				color: pink;
-			}
-			#ju{
-				float: left;
-				margin-left: 100px;
-			}
-			#morn{
-				float: right;
-				margin-right: 30px;
-				font-size: 14px;
-			}
-			#product-img{
-				width: 430px;
-				height: 500px;
-				float: left;
-			}
-			
-			.s_box{width:400px;height: 400px;position: absolute;left: 220px;top:180px;}
-	        .s_box img{width: 400px;height: 400px;}
-	        .s_box span{width: 100px;height: 100px;background: rgba(200,200,200,0.5);position: absolute;left:0;top:0;display:none;cursor:move;}	
-	        .b_box{width: 400px;height: 400px;overflow: hidden;position: absolute;left:625px;top:180px;display: none;}
-	        .b_box img{width: 800px;height: 600px;position: absolute;left:0;top:0;}	
-	        .list{margin: 0;padding: 0;list-style: none;position: absolute;left:210px;top:600px;}
-	        .list li{float: left;margin: 0 10px;}
-	        .list li img{width: 100px;height: 100px;}
-			#product-introduce{
-				width: 500px;
-				height: 500px;
-				float: right;
-			}
-			#nam{
-				float: left;
-				margin-left: 20px;
-				margin-top: 20px;
-			}
-			#bao{
-				width: 100%;
-				height: 80px;
-				line-height: 80px;
-				float: left;
-				margin-left: 20px;
-				margin-top: 30px;
-			}
-			#baoyou{
-				display: inline-block;
-				width: 50px;
-				height: 30px;
-				line-height: 30px;
-				text-align: center;
-				color: white;
-				border-radius: 8px;
-				background: orange;
-			}
-			#tuihuo{
-				display: inline-block;
-				width: 100px;
-				height: 30px;
-				line-height: 30px;
-				text-align: center;
-				color: white;
-				border-radius: 8px;
-				background: orange;
-				margin-left: 20px;
-			}
-			#diejuan{
-				display: inline-block;
-				width: 130px;
-				height: 30px;
-				line-height: 30px;
-				text-align: center;
-				color: white;
-				border-radius: 8px;
-				background: orange;
-				margin-left: 20px;
-			}
-			
-			#fuwu{
-				width: 460px;
-				float: left;
-				margin-left: 20px;
-				margin-top: 20px;
-				border: 1px dotted #ccc;
-			}
-			#fuwu ul{
-				list-style-type: disc;
-				margin-left: 20px;
-			}
-			#fuwu ul li{
-				color: #ccc;
-				font-size: 14px;
-				margin-bottom: 10px;
-				padding-top: 5px;
-			}
-			#price{
-				float: left;
-				margin-left: 20px;
-				margin-top: 25px;
-				width: 460px;
-				height: 90px;
-				background-color: red;
-			}
-			#now{
-				font-size: 60px;
-				font-weight: bold;
-				color: white;
-				line-height: 90px;
-			}
-			#original{
-				text-decoration: line-through;
-				color: white;
-			}
-			#qiang{
-				
-			}
-			#qiang input{
-				float: right;
-				margin-top: 22px;
-				margin-right: 10px;
-				width: 120px;
-				height: 45px;
-				font-size: 24px;
-				border-radius: 6px;
-				border: none;
-				color: red;
-				background-color: orange;
-			}
-			#goumai{
-				width: 410px;
-				height: 40px;
-				float: left;
-				margin-left: 20px;
-				margin-top: 20px;
-				line-height: 40px;
-			}
-			#goumai a{
-				font-size: 14px;
-			}
-			
-			/*底部*/
-			footer{
-				width: 100%;
-				border-top: 4px solid #ccc;	
-			}
-			#last{
-				width: 940px;
-				height: 300px;
-				margin: 0 auto;
-			}
-			#last-nav{
-				float: left;
-				margin-top: 50px;
-			}
-			#last-nav li{
-				float: left;
-				margin-right: 80px;
-				font-size: 14px;
-				color: #666;
-			}
-			#last-nav li p{
-				font-size: 12px;
-				margin-top: 30px;
-				color: #666;
-			}
-			#last-nav li:first-child{
-				font-weight: bold;
-				font-size: 24px;				
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/product-details.css"/>
 	</head>
+	
 	<body>
 		<header>
 			<div id="head">
 				<img src="img/jhs.jpg"/>
 				<ul>
-					<li><a href="" class="write">首页</a></li>
+					<li><a href="index.html" class="write">首页</a></li>
 					<li><a href="">品牌团</a></li>
 					<li><a href="">非常大牌</a></li>
 					<li><a href="">聚名品</a></li>
@@ -253,45 +26,32 @@
 			<div id="product-details">
 				<div id="brand-top">
 					<span id="brand">品牌团</span>
-					<span id="ju">聚划算专场</span>
-					<span id="morn"><a href="activity.html">查看更多品牌商品</a></span>
+					<span id="ju"><a href="activity.html">聚划算专场</a></span>
+					<span id="morn"><a href="shopping.html" class="iconfont icon-gouwuchekong">我的购物车</a></span>
 				</div>
 				<div id="product-img">
-					<div class="s_box">
-				        <img src="img/yifu.jpg" alt="">
-				        <span></span>
-				    </div>
-				    <div class="b_box">
-				        <img src="img/yifu.jpg" alt="">
-				    </div>
-				    <ul class="list">
-				        <li><img src="img/yifu2.jpg" alt=""></li>
-				    </ul>
+					
 				</div>
 				<div id="product-introduce">
-					<p id="nam">可口可乐联名T恤</p>
-					<div id="bao">
-						<span id="baoyou">包邮</span>
-						<span id="tuihuo">退货赔运费</span>
-						<span id="diejuan">叠券满300减60</span>
-					</div>
-					<div id="fuwu">
-						<ul>
-							<li>夏季新品 2020新品上市</li>
-							<li>潮流时尚 穿着舒适</li>
-							<li>七天无忧退换 品牌直供，七天无忧退换货，0风险购物</li>
-						</ul>
-					</div>
-					<div id="price">
-						<span id="now">￥129</span>
-						<span id="original">￥169</span>
-						<span id="qiang"><input type="button" value="马上抢"/></span>
-					</div>
-					<div id="goumai">
-						<span id="jia"><a href="" class="iconfont icon-gouwuchekong">加入购物车</a></span>
+					
+				</div>
+				<div id="sl">数量:&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" value="1" id="count"/></div>
+				<div id="goumai">
+						<span id="jia" class="iconfont icon-gouwuchekong">加入购物车</span>
 						<span id="shou"><a href=""  class="iconfont icon-hongxin">加入聚收藏</a></span>
 						<span id="fen"><a href="" class="iconfont icon-fenxiang">分享</a></span>
 					</div>
+			</div>
+			<div id="xuanxiang">
+				<ul>
+					<li class="active">宝贝详情</li>
+					<li>历史评价</li>
+					<li>活动详情</li>
+				</ul>
+				<div class="cont">
+					<div class="cont1"><img src="img/shangpin.jpg" style="width: 920px; height: 1400px;"/></div>
+					<div class="cont2">暂无评论</div>
+					<div class="cont3"><img src="img/lee.jpg"/></div>
 				</div>
 			</div>
 		</main>
@@ -318,26 +78,5 @@
 	</body>
 </html>
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/enlarge.js"></script>
-<script>
-	let l = new Large();
-    l.addEvent();
-	
-	$('.Top').click(function() {
-			$("html,body").animate({scrollTop:0},1100); 
-		})
-	 $(".Top").mouseover(function () {
-		       $(".Top").css({color:'white',background:'#FD3F31'});
-		    }).mouseout(function () {
-		    	$(".Top").css({color:'#FD3F31',background:'white'});
-            })
-            //返回顶部显示
-		$(window).on('scroll',function(){
-		    var $scroll=$(this).scrollTop();
-		    if($scroll>=120){
-		        $('.Top').show();
-		    }else{
-		        $('.Top').hide();
-		    }
-		})
-</script>
+<script src="js/cookieTools.js"></script>
+<script src="js/getGoodsDetails.js"></script>

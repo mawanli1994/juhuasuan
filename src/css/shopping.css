@@ -1,0 +1,103 @@
+    	body{background-color: #F3F3F3;}
+    	header{
+			width: 100%;				
+			background-color: white;		
+		}
+		#head{
+			width: 940px;
+			height: 82px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#head img{
+			width: 149px;
+			height: 120px;
+			position: absolute;
+			z-index: 999;
+		}
+		
+		
+		#head ul{
+			float: right;
+			margin-top: 22px;
+		}
+		#head li{
+			float: left;
+			width: 68px;
+			height: 25px;
+			text-align: center;
+			line-height: 25px;
+			font-weight: 600;
+		}
+		#head ul a{
+			display: block;
+			border-radius: 5px;
+		}
+		#head ul li a:hover{
+			background: #DCDCDC;
+		}
+		#car{
+            width: 940px;
+            height: 80px;
+            margin: 0 auto;
+             /*background-color: #ccc;*/ 
+        }
+        #mycar{
+            font-size: 32px;
+            font-weight: bold;
+            float: left;
+            margin-left: 400px;
+            margin-top: 10px;
+            color: orange;
+        }	
+        #again{
+            float: right;
+            margin-top: 50px;
+            margin-right: 10px;
+            font-size: 14px;  
+            color: black;  
+        }
+		
+		#shopping{
+			width: 940px;
+			/*min-height: 1000px;*/
+			margin: 0 auto;
+			padding-top: 20px;
+			background-color: #fff;
+			text-align: center;
+			/*border: 1px solid #000;*/
+		}
+		td{height:100px;border: 1px solid #666; vertical-align:middle;text-align: center;}
+		
+        img{width: 100px;height: 100px;}
+        
+        /*底部*/
+			footer{
+				width: 100%;
+				border-top: 4px solid #ccc;	
+			}
+			#last{
+				width: 940px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				margin-top: 50px;
+			}
+			#last-nav li{
+				float: left;
+				margin-right: 90px;
+				font-size: 14px;
+				color: #666;
+			}
+			#last-nav li p{
+				font-size: 12px;
+				margin-top: 30px;
+				color: #666;
+			}
+			#last-nav li:first-child{
+				font-weight: bold;
+				font-size: 24px;
+				
+			}

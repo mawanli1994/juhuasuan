@@ -1,0 +1,161 @@
+			header{
+				width: 100%;
+			}
+			#head{
+				width: 990px;
+				height: 92px;
+				margin: 0 auto;
+			}
+			
+			
+			#head img{
+				width: 240px;
+				height: 40px;
+				float: left;
+				margin-top: 26px;
+			}
+			#head input{
+				float: left;
+			}
+			#user{
+				width: 400px;
+				height: 20px;
+				line-height: 20px;
+				font-size: 12px;
+				border: 2px solid red;
+				margin-left: 267px;
+				margin-top: 30px;
+				padding: 5px 3px 5px 5px;
+			}
+			#btn{
+				width: 70px;
+				height: 34px;
+				border: none;
+				color: white;
+				background-color: red;
+				margin-top: 30px;
+			}
+			main{
+				width: 100%;
+			}
+			#activity{
+				width: 1349px;
+				height: 450px;
+				background-image: url(../img/lu-1.jpg);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			#cont{
+				width: 990px;
+				height: 450px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#tmall{
+				font-size: 72px;
+				font-weight: bold;
+				color: white;
+				position: absolute;
+				left: 30px;
+				top: 85px;
+			}
+			#two{
+				font-size: 32px;
+				color: white;
+				position: absolute;
+				left: 30px;
+				top: 160px;
+			}
+			#list{
+				width: 500px;
+				height: 160px;
+				position: absolute;
+				left: 30px;
+				top: 230px;
+				display: flex;
+			}
+			#list img{
+				flex: 1;
+				width: 160px;
+				height: 160px;
+			}
+			#imgs{
+				width: 375px;
+				height: 350px;
+				position: absolute;
+				left: 610px;
+				top: 95px;
+			}
+			#imgs img{
+				width: 375px;
+				height: 440px;
+				float: left;
+				margin-top: -90px;
+			}
+			/*商品列表*/
+			#product-list{
+				width: 990px;
+				height: 1200px;
+				margin: 0 auto;
+				background: peachpuff;
+			}
+			#product-list .goods{
+				width: 240px;
+				margin-top:10px;
+				float: left;
+				border: solid 2px #ccc;
+				box-sizing: border-box;
+				text-align: center;
+				margin-left: 7.5px;
+			}
+	        .goods img{
+	        	width: 80%;
+        	}
+	        #product-list .goods:hover{
+	        	border: 2px solid red;
+        	}
+	        .goods span{
+	        	display: block;
+	        	margin: 10px 0;
+        	}
+	        .goods p{
+	        	margin: 0;
+	        	height: 40px;
+	        	line-height: 20px;
+	        	overflow: hidden;
+        	}
+	        .goods input{
+	        	display: block;
+	        	padding: 2px;
+	        	margin: 0 auto;
+        	}
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				border-top: 4px solid #ccc;	
+			}
+			#last{
+				width: 990px;
+				height: 300px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				margin-top: 50px;
+			}
+			#last-nav li{
+				float: left;
+				margin-right: 90px;
+				font-size: 14px;
+				color: #666;
+			}
+			#last-nav li p{
+				font-size: 12px;
+				margin-top: 30px;
+				color: #666;
+			}
+			#last-nav li:first-child{
+				font-weight: bold;
+				font-size: 24px;				
+			}

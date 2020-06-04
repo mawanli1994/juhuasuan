@@ -1,0 +1,135 @@
+			.box{
+				width: 100%;
+				height: 498px;
+				background-image: url(../img/bbjj.jpg);
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				position: relative;
+								
+			}
+			#sign{
+				width: 450px;
+				height: 235px;
+				background-color: white;
+				position: absolute;
+				left: 775px;
+				top: 215px;
+				font-size: 20px;
+				font-weight: bold;
+				padding: 20px;
+			}
+			
+			p{
+				text-align: center;
+				font-size: 30px;
+			}
+			#use{
+				position: absolute;
+				left: 60px;
+				top: 75px;
+			}
+			#user{
+				position: absolute;
+				left: 140px;
+				top: 70px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#pas{
+				position: absolute;
+				left: 60px;
+				top: 125px;
+			}
+			#pass{
+				position: absolute;
+				left: 140px;
+				top: 120px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#cod{
+				position: absolute;
+				left: 60px;
+				top: 175px;
+			}
+			#code{
+				position: absolute;
+				left: 140px;
+				top: 170px;
+				width: 250px;
+				height: 20px;
+				padding: 2px;
+			}
+			#codeSpan{
+				position: absolute;
+				left: 410px;
+				top: 175px;
+			}
+			#btn{
+				position: absolute;
+				left: 75px;
+				top: 220px;
+				background-color: red;
+				color: white;
+				border: none;
+				font-weight: bold;
+				width: 250px;
+				height: 30px;
+				padding: 2px;
+			}
+			#forget{
+				font-size: 12px;
+				position: absolute;
+				left: 345px;
+				top: 236px;
+			}
+			#forget a{
+				color: red;
+			}
+			#message-box{
+				position: absolute;
+				left: 120px;
+				top: 255px;
+				background: #fff;
+				font-size: 12px;
+				width: 300px;
+				height: 20px;
+				text-align: center;
+				line-height: 20px;
+			}
+			
+			/*底部*/
+			footer{
+				width: 100%;
+				height: 128px;
+				background: #F3F3F3;
+			}
+			#last{
+				width: 1196px;
+				height: 120px;
+				margin: 0 auto;
+			}
+			#last-nav{
+				float: left;
+				line-height: 140px;
+			}
+			#last-nav li{
+				float: left;
+				margin-left: 80px;
+				font-size: 20px;
+				font-weight: bold;
+				color: #666;
+			}
+			#last-nav li:hover{
+				color: red;
+			}
+			#last-nav li img{
+				width: 200px;
+				height: 80px;
+				float: left;
+				margin-top: 20px;
+			}
+			
+			.box1{width: 20px;height: 20px;background-image: url(../img/shan.jpg); background-size:20px 20px;position: absolute;}
